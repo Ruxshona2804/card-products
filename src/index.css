@@ -1,0 +1,55 @@
+@import "tailwindcss";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+}
+/* Swiper uchun maxsus stillar */
+.mySwiper {
+  width: 100%;
+  
+}
+
+.mySwiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+/* Navigatsiya tugmalari */
+.swiper-button-next, .swiper-button-prev {
+  color: white !important;
+}
+
+/* Pagination (nuqtalar) */
+.swiper-pagination-bullet {
+  background-color: white !important;
+  width: 10px;
+  height: 10px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet-active {
+  background-color: #225c31 !important;
+}
+
+
+.blue{
+  background: linear-gradient(267.03deg, #0D99F8 0.94%, #21A0F8 5.36%, #54B5FF 27.35%, #0DBBF8 79%, #0DDBF8 97.53%);
+height: 70vh;
+}
