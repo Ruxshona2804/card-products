@@ -49,23 +49,33 @@ const Products = () => {
         </SwiperSlide>
       </Swiper>
       <p className='font-bold text-center text-[30px] mt-5'>Список продуктов</p>
-      <div className=' gap-5'>
-        <div className='grid grid-cols-3  gap-3'>
-          {Array.isArray(data) && data.length > 0 ? (
-            data.map((item) => (
-              <div className='border border-gray-300 rounded-md shadow-lg overflow-hidden h-full' key={item.id}>
-                <img className='w-full object-contain h-[200px]' src={item.thumbnail} alt={item.title} />
-                <Link to={`/product-detail/${item?.id}`}>
-                  <p className='hover:shadow'>Название продукта: {item.title}</p>
+      {/* Продукты */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 col-span-3 gap-4">
+        {Array.isArray(data) && data.length > 0 ? (
+          data.map((item) => (
+            <div
+              key={item.id}
+              className=" rounded-lg shadow-lg overflow-hidden transition hover:shadow-xl h-full"
+            >
+              <img
+                className="w-full object-contain h-48"
+                src={item.thumbnail}
+                alt={item.title}
+              />
+              <div className="p-4">
+                <Link to={`/product-detail/${item?.id}`} className="block font-semibold hover:underline">
+                  {item.title}
                 </Link>
-                <p className='p-3'>Стоимость: {item.price} $</p>
-                <button className='  rounded-md font-bold bg-orange-400 px-2 py-1'>Купить</button>
+                <p className="mt-2 text-lg font-bold text-gray-700">${item.price}</p>
+                <button className="w-full  py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition">
+                  Купить
+                </button>
               </div>
-            ))
-          ) : (
-            <p>Загрузка продуктов...</p>
-          )}
-        </div>
+            </div>
+          ))
+        ) : (
+          <p className="col-span-full text-center text-gray-500">Загрузка продуктов...</p>
+        )}
       </div>
       <div className='h-[100vh] flex justify-center items-center'>
         <div className='relative flex justify-center items-center h-[300px] md:h-[400px] w-full bg-blue-500 rounded-2xl p-5 overflow-hidden'>
