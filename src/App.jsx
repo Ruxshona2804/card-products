@@ -7,8 +7,7 @@ import Navbar from "./components/Layout/Navbar"
 function App() {
   return (
     <div>
-      <Navbar />
-     
+      <Navbar />  
       <Outlet />
       <Footer_card />
     </div>
