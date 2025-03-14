@@ -15,6 +15,7 @@ export default function Navbar() {
                 <ul className="flex items-center gap-5 md:gap-7 text-sm md:text-base">
                     <Link to="/" className="hover:text-gray-300 transition">Главная</Link>
                     <Link to="/category-list" className="hover:text-gray-300 transition">Категории</Link>
+                    <Link to="/profile" className="hover:text-gray-300 transition">Личный кабинет</Link>
                 </ul>
                 
                 {/* Иконки и кнопки */}

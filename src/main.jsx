@@ -35,6 +35,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="product-detail/:id" element={<ProductDetail />} />
             <Route path="category-list" element={<Categories />} />
             <Route path="carts" element={<Carts />} />
+            <Route path="/profile" element={<LoginCards />} />
           </Route>
 
          
