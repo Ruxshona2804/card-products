@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Profile = () => {
@@ -87,6 +87,7 @@ const Profile = () => {
           <div className="mt-6 flex justify-center">
             <img className="w-32 h-32 rounded-full" src={user.image} alt="Аватар" />
           </div>
+          <Link to={"/"} className="font-bold mx-auto border flex justify-center rounded-xl px-1 py-2 bg-black text-white active:bg-black/70 mt-3"> <div>Войти</div></Link>
         </div>
       ) : (
         // Форма входа
